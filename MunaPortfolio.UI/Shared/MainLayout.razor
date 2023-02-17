@@ -1,10 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-<div>
-    <div>
+<div class="@background">
+    <div class="row">
+    <div class="col">
+             <i class="fa-solid fa-droplet"  onclick="@ToggleColour"></i> Colour
+    </div>
+    <div class="col" style="margin-top:100px;">
         <NavMenu />
     </div>
-
+    </div>
     <main>
 
         <article class="content px-4">
@@ -12,3 +16,27 @@
         </article>
     </main>
 </div>
+
+
+@code {
+    private bool collapseNavMenu = true;
+    private bool black = false;
+    private bool color = false;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string? background => black ? "bg-black" : null;
+    private string? TextColour => color ? "text-white" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+    
+    private void ToggleColour()
+    {
+        black = !black;
+        color = !color;
+    }
+
+}
+

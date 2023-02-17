@@ -1,7 +1,7 @@
-﻿<nav class="navbar fixed-top navbar-expand-lg">
+﻿<nav class="navbar fixed-top navbar-expand-lg @TextColour @background" >
   <div class="container">
-    <i class="navbar-brand" href="#">Marvelous Portfolio</i>
-    <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
+    <i class="navbar-brand @TextColour" href="#">Marvelous Portfolio</i>
+    <button class="navbar-toggler @TextColour" type="button" @onclick="ToggleNavMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="@NavMenuCssClass navbar-collapse justify-content-evenly" @onclick="ToggleNavMenu">
@@ -26,17 +26,37 @@
                 <i class="fa-solid fa-phone-volume me-3" ></i> Contact
             </NavLink>
         </div>
+        
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/"@onclick="ToggleColour">
+             <i class="fa-solid fa-droplet"></i> Colour Mode
+            </NavLink>
+        </div>
     </div>
+             
   </div>
+  
 </nav>
+
 @code {
     private bool collapseNavMenu = true;
+    private bool black = false;
+    private bool color = false;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string? background => black ? "bg-black" : null;
+    private string? TextColour => color ? "text-white" : null;
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
     }
+    
+    private void ToggleColour()
+    {
+        black = !black;
+        color = !color;
+    }
+
 }
 
