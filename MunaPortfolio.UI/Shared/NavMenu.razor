@@ -1,39 +1,62 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">MunaPortfolio.UI</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿<nav class="navbar fixed-top navbar-expand-lg @TextColour @background" >
+  <div class="container">
+    <i class="navbar-brand @TextColour" href="#">Marvelous Portfolio</i>
+    <button class="navbar-toggler @TextColour" type="button" @onclick="ToggleNavMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="@NavMenuCssClass navbar-collapse justify-content-evenly" @onclick="ToggleNavMenu">
+         <div class="nav-item ">
+            <NavLink class="nav-link animation" href="/" Match="NavLinkMatch.All">
+                <i class="fa-regular fa-address-card me-3"></i> About
+            </NavLink>
+        </div>
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/">
+                <span class="fa-solid fa-list-check pe-3"></span>Project
+            </NavLink>
+        </div>
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/">
+                <i class="fa-regular fa-file me-3"></i>Resume
+            </NavLink>
+        </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/">
+                <i class="fa-solid fa-phone-volume me-3" ></i> Contact
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+        
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/"@onclick="ToggleColour">
+             <i class="fa-solid fa-droplet"></i> Colour Mode
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    </div>
+             
+  </div>
+  
+</nav>
 
 @code {
     private bool collapseNavMenu = true;
+    private bool black = false;
+    private bool color = false;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string? background => black ? "bg-black" : null;
+    private string? TextColour => color ? "text-white" : null;
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
     }
+    
+    private void ToggleColour()
+    {
+        black = !black;
+        color = !color;
+    }
+
 }
+
