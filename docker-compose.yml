@@ -1,0 +1,11 @@
+services:
+    api:  
+        image: munafrank/portfolio-api:v1
+        ports:
+          - "5555:80"
+    ui:
+      image: munafrank/portfolio-ui:v1
+      ports:
+          - "5556:80"
+      depends_on:
+          - "api" 

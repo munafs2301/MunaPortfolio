@@ -1,0 +1,79 @@
+﻿/*@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');*/
+
+/*html, body {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+h1:focus {
+    outline: none;
+}*/
+
+a, .btn-link {
+    color: yellow;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+.mborder {
+    border-style: solid;
+    border-color: red;
+}
+
+.border-bottom {
+    border-style: none none solid none;
+}
+.body-black{
+
+}
+/*.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}*/
+
+.content {
+    padding-top: 5rem;
+}
+
+/*.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+*/
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,phn2zyb3awr0ad0intyiighlawdodd0indkiihhtbg5zpsjodhrwoi8vd3d3lnczlm9yzy8ymdawl3n2zyigeg1sbnm6egxpbms9imh0dha6ly93d3cudzmub3jnlze5otkvegxpbmsiig92zxjmbg93psjoawrkzw4ipjxkzwzzpjxjbglwugf0acbpzd0iy2xpcdaipjxyzwn0ihg9ijiznsiget0inteiihdpzhropsi1niigagvpz2h0psi0osivpjwvy2xpcfbhdgg+pc9kzwzzpjxnignsaxatcgf0ad0idxjskcnjbglwmckiihryyw5zzm9ybt0idhjhbnnsyxrlkc0ymzugltuxksi+phbhdgggzd0itti2my41mdygntfdmjy0ljcxnya1msaynjuuodeziduxljq4mzcgmjy2ljywnia1mi4ynju4tdi2ny4wntigntiunzk4nyaynjcuntm5iduzljyyodmgmjkwlje4nsa5mi4xodmxidi5mc41ndugotiunzk1idi5mc42ntygotiuotk2qzi5mc44nzcgotmuntezidi5msa5nc4wode1idi5msa5nc42nzgyidi5msa5ny4wnjuxidi4os4wmzggotkgmjg2ljyxnya5ouwyndaumzgzidk5qzizny45njmgotkgmjm2idk3lja2ntegmjm2idk0ljy3odigmjm2idk0ljm3otkgmjm2ljazmsa5nc4wodg2idizni4wodkgotmuoda3mkwymzyumzm4idkzljaxnjigmjm2ljg1oca5mi4xmze0idi1os40nzmgntmunji5ncayntkuotyxiduyljc5odugmjywljqwnya1mi4ynju4qzi2ms4yiduxljq4mzcgmjyylji5nia1msaynjmunta2iduxwk0ynjmuntg2idy2ljaxodndmjywljcznya2ni4wmtgzidi1os4zmtmgnjcumti0nsayntkumzezidy5ljmznyayntkumzezidy5ljyxmdigmju5ljmzmia2os44nja4idi1os4znzegnzaumdg4n0wynjeunzk1idg0ljaxnjegmjy1ljm4idg0ljaxnjegmjy3ljgymsa2os43ndc1qzi2ny44nia2os43mza5idi2ny44nzkgnjkuntg3nyaynjcuodc5idy5ljmxnzkgmjy3ljg3osa2ny4xmtgyidi2ni40ndggnjyumde4myaynjmuntg2idy2ljaxodnatti2my41nzygodyumdu0n0mynjeumdq5idg2lja1ndcgmju5ljc4nia4ny4zmda1idi1os43odygodkunzkymsayntkunzg2idkylji4mzcgmjyxlja0osa5my41mjk1idi2my41nzygotmunti5nsaynjyumte2idkzljuyotugmjy3ljm4nya5mi4yodm3idi2ny4zodcgodkunzkymsaynjcumzg3idg3ljmwmdugmjy2ljexnia4ni4wntq3idi2my41nzygodyumdu0n1oiigzpbgw9iingrku1mdaiigzpbgwtcnvszt0izxzlbm9kzcivpjwvzz48l3n2zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::after {
+        content: "an error has occurred."
+    }
