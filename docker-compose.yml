@@ -1,11 +1,13 @@
 services:
     api:  
         image: munafrank/portfolio-api:v1
-        ports:
-          - "5555:80"
+        build:
+            context: .
+            dockerfile: MunaPortfolio.Api/Dockerfile
     ui:
-      image: munafrank/portfolio-ui:v1
-      ports:
-          - "5556:80"
-      depends_on:
+        image: munafrank/portfolio-ui:v1
+        build:
+            context: .
+            dockerfile: MunaPortfolio.UI/Dockerfile
+        depends_on:
           - "api" 
