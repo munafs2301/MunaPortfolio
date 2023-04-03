@@ -1,0 +1,30 @@
+name: Prodcution CI
+
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches: "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v3
+      
+      #Log in to docker hub 
+      - name: Login To Docker Hub 
+        env:
+          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: |
+          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - name: Build Compose File
+        run: |
+          docker-compose build
+          
+      - name: Push Images in Compose File
+        run: |
+          docker-compose push
