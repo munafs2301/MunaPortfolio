@@ -1,11 +1,11 @@
-name: ci
+name: Dev Ci
 
 on:
   push:
     branches:
-      - "master"
+      - "feature"
   pull_request:
-    branches: "master"
+    branches: "feature"
 
 jobs:
   build:
