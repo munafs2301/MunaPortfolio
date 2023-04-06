@@ -17,7 +17,7 @@ a, .btn-link {
 }
 
 .mborder {
-    border-style: solid;
+    border-style: solid solid solid solid;
     border-color: red;
 }
 
