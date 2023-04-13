@@ -13,11 +13,17 @@ a, .btn-link {
 }
 
 .nav-link:hover {
-    color: yellow;
+    color: #FFC200;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.logo:hover {
+    color: #FFC200;
 }
 
 .mborder {
-    border-style: solid;
+    border-style: solid solid solid solid;
     border-color: red;
 }
 

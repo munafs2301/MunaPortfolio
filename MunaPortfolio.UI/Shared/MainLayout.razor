@@ -1,13 +1,51 @@
 ﻿@inherits LayoutComponentBase
-
 <div>
    
-    <div class="col" style="margin-top:100px;">
-        <NavMenu />
-    </div>    <main>
+    <div class="col" style="margin-top: 50px" >        
+<nav class="navbar fixed-top navbar-expand-lg @TextColour @background" style=" z-index: 10;" >
+  <div class="container">
+    <i class="navbar-brand logo fw-bold @TextColour" href="#"> <span class="fa-solid fa-fingerprint  fs-1"></span>  Marvelous Portfolio</i>
+    <button class="navbar-toggler @TextColour" type="button" @onclick="ToggleNavMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="@NavMenuCssClass navbar-collapse justify-content-evenly" @onclick="ToggleNavMenu">
+         <div class="nav-item ">
+            <NavLink class="nav-link animation" href="/" Match="NavLinkMatch.All">
+                 About
+            </NavLink>
+        </div>
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/">
+                Project
+            </NavLink>
+        </div>
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/">
+                Resume
+            </NavLink>
+        </div>
 
+        <div class="nav-item ">
+            <NavLink class="nav-link" href="/">
+                Contact
+            </NavLink>
+        </div>
+        
+        <div class="nav-item ">
+            <NavLink class="nav-link fw-medium" href="/"@onclick="ToggleColour">
+             <i class="fa-solid fa-droplet"></i> Colour Mode
+            </NavLink>
+        </div>
+    </div>
+             
+  </div>
+  
+</nav>
+
+    </div >    
+    <main class="vh-100 w-auto @TextColour @background">
         <article class="content px-4">
             @Body
         </article>
     </main>
-</div>
+    </div>
