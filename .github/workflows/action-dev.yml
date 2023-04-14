@@ -1,0 +1,35 @@
+name: Development CI
+
+on:
+  push:
+    branches:
+      - "feature"
+  pull_request:
+    branches: "feature"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v3
+      
+      #Log in to docker hub 
+      - name: Login To Docker Hub 
+        env:
+          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: |
+          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - name: Build API
+        run: |
+          docker build -t munafrank/portfolio-api:v1 -f ./MunaPortfolio.Api/Dockerfile .
+     
+      - name: Build UI
+        run: |
+          docker build -t munafrank/portfolio-ui:v1 -f ./MunaPortfolio.UI/Dockerfile .
+      
+      - name: Push Images To DockerHub 
+        run: |
+          docker push munafrank/portfolio-api:v1
+          docker push munafrank/portfolio-ui:v1
