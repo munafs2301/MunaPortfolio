@@ -1,12 +1,40 @@
 ﻿/*@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');*/
 
-/*html, body {
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+.image-container {
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(-10deg); /*Muna: Comment this out to get a different effect.*/
 }
 
-h1:focus {
-    outline: none;
-}*/
+
+.image2-container {
+    background-color: #FFC200;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(10deg);
+}
+
+.image3-container {
+    background-color: #e8e6e6;
+}
+
+.test {
+    transform: rotate(-10deg);
+}
+
+.about-image {
+    margin-top: 4em;
+}
+.small-text {
+    color: #5b5b5b;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 50px;
+    letter-spacing: 0.2px;
+}
+
 
 a, .btn-link {
     color: yellow;
@@ -18,7 +46,7 @@ a, .btn-link {
     transform: scale(1.2);
 }
 
-.logo:hover {
+.logo:hover, .name:hover {
     color: #FFC200;
 }
 
