@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunaPortfolio.UI", "MunaPortfolio.UI\MunaPortfolio.UI.csproj", "{476FCFD4-46BB-4AA5-AD14-7C626E6B660E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MunaPortfolio.UI", "MunaPortfolio.UI\MunaPortfolio.UI.csproj", "{476FCFD4-46BB-4AA5-AD14-7C626E6B660E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunaPortfolio.Api", "MunaPortfolio.Api\MunaPortfolio.Api.csproj", "{A80BB53A-A14C-4FF9-A684-299A13F51D54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MunaPortfolio.Api", "MunaPortfolio.Api\MunaPortfolio.Api.csproj", "{A80BB53A-A14C-4FF9-A684-299A13F51D54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunaPortfolio.SharedLibrary", "MunaPortfolio.SharedLibrary\MunaPortfolio.SharedLibrary.csproj", "{3BE870A5-8773-4B24-80AC-CDD280D2F291}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MunaPortfolio.SharedLibrary", "MunaPortfolio.SharedLibrary\MunaPortfolio.SharedLibrary.csproj", "{3BE870A5-8773-4B24-80AC-CDD280D2F291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
